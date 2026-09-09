@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   },
   description:
     "I like problems that don't have a clean brief yet. Product judgment, systems thinking, and hands-on delivery for work that's real but not yet defined.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "BJ Richardson — Product Leader, Strategist, Builder",
     description:
