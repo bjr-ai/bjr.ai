@@ -45,7 +45,7 @@ export function Header() {
       >
         <Link href="/" className="mono" style={{ fontSize: "0.95rem" }}>
           <span style={{ color: "var(--porcelain)" }}>bjr</span>
-          <span style={{ color: "var(--indigo)" }}>.ai</span>
+          <span style={{ color: "var(--violet)" }}>.ai</span>
         </Link>
 
         <nav aria-label="Primary" className="nav-desktop">

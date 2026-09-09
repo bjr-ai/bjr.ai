@@ -33,7 +33,7 @@ export function BeforeAfter({
             borderRadius: 6,
             border: "1px solid var(--hairline)",
             background: !showAfter ? "var(--indigo)" : "transparent",
-            color: "var(--porcelain)",
+            color: "var(--indigo-fg)",
             fontSize: "0.85rem",
             cursor: "pointer",
           }}
@@ -50,7 +50,7 @@ export function BeforeAfter({
             borderRadius: 6,
             border: "1px solid var(--hairline)",
             background: showAfter ? "var(--indigo)" : "transparent",
-            color: "var(--porcelain)",
+            color: "var(--indigo-fg)",
             fontSize: "0.85rem",
             cursor: "pointer",
           }}
@@ -88,6 +88,7 @@ export function BeforeAfter({
             src={beforeSrc}
             alt="Legacy Bank Resources homepage, fixed-width table layout, HTTP only"
             fill
+            aria-hidden={showAfter}
             style={{
               objectFit: "cover",
               objectPosition: "top",
@@ -100,6 +101,7 @@ export function BeforeAfter({
             src={afterSrc}
             alt="Production Bank Resources homepage, responsive, launched September 2026"
             fill
+            aria-hidden={!showAfter}
             style={{
               objectFit: "cover",
               objectPosition: "top",

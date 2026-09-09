@@ -80,7 +80,7 @@ export default function Home() {
             <div style={{ display: "flex", gap: 0, flexWrap: "wrap", marginTop: 52, borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)" }}>
               <KpiStat value="HTTPS" label="enforced, apex to www" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and the old setup left the site and the business's email exposed on the same unprotected DNS zone.`} />
               <KpiStat value="-79%" label="logo file size" why="A smaller logo file loads faster on the first paint, which matters most on the slower mobile connections a lot of visitors are on." />
-              <KpiStat value="0" label="axe-core violations" why="Zero flags on an automated accessibility scan means screen-reader and keyboard-only visitors can actually use the site, not just see it." />
+              <KpiStat value="0" label="axe-core violations" why="The automated axe-core scan found no violations in the tested pages and states. Keyboard and screen-reader checks remain part of ongoing review — this number is a floor, not a guarantee." />
               <KpiStat value="0" label="W3C validation errors" why="Clean, standards-compliant markup renders predictably across browsers and is cheaper to maintain later — fewer surprises when something needs to change." />
               <KpiStat value="~170KB" label="core homepage payload" why="A lighter page loads faster on a slow connection — which is exactly the kind of connection a lot of this business's actual customers are on." alignRight borderRight={false} />
             </div>
@@ -282,7 +282,7 @@ export default function Home() {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap", marginTop: 36 }}>
-              <a href="https://linkedin.com/in/bjrai" className="btn-text">
+              <a href="https://linkedin.com/in/bjrai" className="btn-text" target="_blank" rel="noopener noreferrer">
                 View experience on LinkedIn
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -292,6 +292,8 @@ export default function Home() {
                 href="/BJ-Richardson-Resume.pdf"
                 className="mono btn-text"
                 style={{ fontSize: "0.95rem" }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Résumé — payments &amp; product leadership (PDF)
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -301,7 +303,7 @@ export default function Home() {
             </div>
 
             <p className="mono" style={{ fontSize: "0.78rem", color: "var(--text-dimmer)", marginTop: 28, letterSpacing: "0.02em" }}>
-              Experience includes WorldPay / RBS Lynk Systems, MTXeps / NCR Payments, CorFire / SK
+              Experience includes Lynk Systems / RBS Worldpay, MTXeps / NCR Payments, CorFire / SK
               C&amp;C, NCR, Bakkt, and now bjr.ai / BJR AI LLC.
             </p>
           </div>

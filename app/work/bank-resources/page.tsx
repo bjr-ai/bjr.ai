@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     url: "https://www.bjr.ai/work/bank-resources",
     images: ["/case-studies/bank-resources/after-1440x1000.png"],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bank Resources Case Study — bjr.ai",
+    description:
+      "How a 2005-era bank consultancy site was recovered, verified, and moved — without disrupting the business's email.",
+    images: ["/case-studies/bank-resources/after-1440x1000.png"],
+  },
 };
 
 export default function BankResourcesCaseStudy() {
@@ -158,7 +165,7 @@ export default function BankResourcesCaseStudy() {
             <div style={{ display: "flex", gap: 0, flexWrap: "wrap", border: "1px solid var(--hairline)", borderTop: "1px solid var(--hairline)" }}>
               <KpiStat value="HTTPS" label="enforced, apex to www" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and the old setup left the site and the business's email exposed on the same unprotected DNS zone.`} />
               <KpiStat value="-79%" label="logo file size" why="A smaller logo file loads faster on the first paint, which matters most on the slower mobile connections a lot of visitors are on." />
-              <KpiStat value="0" label="axe-core violations" why="Zero flags on an automated accessibility scan means screen-reader and keyboard-only visitors can actually use the site, not just see it." />
+              <KpiStat value="0" label="axe-core violations" why="The automated axe-core scan found no violations in the tested pages and states. Keyboard and screen-reader checks remain part of ongoing review — this number is a floor, not a guarantee." />
               <KpiStat value="0" label="W3C validation errors" why="Clean, standards-compliant markup renders predictably across browsers and is cheaper to maintain later — fewer surprises when something needs to change." />
               <KpiStat value="~170KB" label="core homepage payload" why="A lighter page loads faster on a slow connection — which is exactly the kind of connection a lot of this business's actual customers are on." alignRight borderRight={false} />
             </div>

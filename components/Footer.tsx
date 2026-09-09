@@ -13,7 +13,7 @@ export function Footer() {
       >
         <div className="mono" style={{ fontSize: "0.95rem" }}>
           <span style={{ color: "var(--porcelain)" }}>bjr</span>
-          <span style={{ color: "var(--indigo)" }}>.ai</span>
+          <span style={{ color: "var(--violet)" }}>.ai</span>
         </div>
         <p style={{ fontSize: "0.82rem", color: "var(--text-dimmer)" }}>
           © 2026 bjr.ai — built with AI assistance, three drafts, and one long

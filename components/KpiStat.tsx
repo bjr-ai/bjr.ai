@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export function KpiStat({
   value,
@@ -16,11 +16,14 @@ export function KpiStat({
   borderRight?: boolean;
 }) {
   const [active, setActive] = useState(false);
+  const tipId = useId();
 
   return (
-    <div
+    <button
+      type="button"
       className={`kpi-stat${alignRight ? " align-right" : ""}`}
-      tabIndex={0}
+      aria-expanded={active}
+      aria-describedby={tipId}
       style={{
         flex: "1 1 140px",
         padding: "22px 24px",
@@ -38,10 +41,10 @@ export function KpiStat({
       <div style={{ fontSize: "0.85rem", color: "var(--text-dimmer)", marginTop: 4 }}>
         {label}
       </div>
-      <div className={`kpi-tip${active ? " is-active" : ""}`}>
+      <div id={tipId} className={`kpi-tip${active ? " is-active" : ""}`}>
         <span className="kpi-tip-label">Why this matters</span>
         <p>{why}</p>
       </div>
-    </div>
+    </button>
   );
 }
