@@ -224,6 +224,20 @@ export default function Home() {
               processors, engineers, operators, and business leaders.
             </p>
 
+            <div style={{ marginTop: 32, borderLeft: "2px solid var(--indigo)", paddingLeft: 20, maxWidth: 640 }}>
+              <div className="mono" style={{ fontSize: "0.85rem", color: "var(--porcelain)" }}>
+                bjr.ai / BJR AI LLC — Founder &amp; Principal Consultant, 2025–present
+              </div>
+              <p style={{ fontSize: "0.98rem", color: "var(--text-dim)", marginTop: 8, lineHeight: 1.55 }}>
+                Recent work includes a community-bank feasibility study and the redesign and
+                production migration behind{" "}
+                <Link href="/work/bank-resources" style={{ color: "var(--violet)", borderBottom: "1px solid var(--hairline)" }}>
+                  Case Study 001
+                </Link>
+                .
+              </p>
+            </div>
+
             <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 28 }}>
               {[
                 { title: "Product leadership", body: "Strategy, roadmaps, discovery, prioritization, and cross-functional delivery." },
@@ -261,7 +275,8 @@ export default function Home() {
                   —
                 </span>
                 <p style={{ fontSize: "0.98rem", color: "var(--text-dim)", maxWidth: 620 }}>
-                  Retail implementation work spanning more than 1,000 Petco locations.
+                  Supported large retail payment implementations, including work for national
+                  retailers with more than 1,000 locations.
                 </p>
               </div>
             </div>
@@ -273,19 +288,21 @@ export default function Home() {
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <span className="mono" style={{ fontSize: "0.95rem", color: "var(--text-dimmer)", borderBottom: "1px dashed var(--hairline)", paddingBottom: 2 }}>
-                  Download résumé — Product &amp; Payments (PDF, 2 pages)
-                </span>
-                <span className="mono" style={{ fontSize: "0.7rem", color: "var(--text-dimmer)", opacity: 0.7 }}>
-                  — add file to activate
-                </span>
-              </div>
+              <a
+                href="/BJ-Richardson-Resume.pdf"
+                className="mono btn-text"
+                style={{ fontSize: "0.95rem" }}
+              >
+                Résumé — payments &amp; product leadership (PDF)
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 3v8m0 0-3-3m3 3 3-3M3 13h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
             </div>
 
             <p className="mono" style={{ fontSize: "0.78rem", color: "var(--text-dimmer)", marginTop: 28, letterSpacing: "0.02em" }}>
               Experience includes WorldPay / RBS Lynk Systems, MTXeps / NCR Payments, CorFire / SK
-              C&amp;C, NCR, and Bakkt.
+              C&amp;C, NCR, Bakkt, and now bjr.ai / BJR AI LLC.
             </p>
           </div>
         </section>
