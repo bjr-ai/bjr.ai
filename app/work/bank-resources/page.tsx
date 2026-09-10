@@ -126,30 +126,26 @@ export default function BankResourcesCaseStudy() {
                 </div>
                 <svg viewBox="0 0 220 120" width="100%" height="120" role="img" aria-labelledby="after-diagram-title">
                   <title id="after-diagram-title">
-                    Website moved to its own hosting; the email path was left untouched
+                    Same DNS zone; only the website&apos;s record now points to modern hosting
                   </title>
-                  <rect x="20" y="4" width="80" height="28" rx="6" fill="none" stroke="var(--indigo)" />
-                  <text x="60" y="22" textAnchor="middle" fontSize="10" fill="var(--porcelain)" fontFamily="var(--font-mono)">
-                    Site DNS
+                  <rect x="70" y="4" width="80" height="28" rx="6" fill="none" stroke="var(--hairline)" />
+                  <text x="110" y="22" textAnchor="middle" fontSize="10" fill="var(--porcelain)" fontFamily="var(--font-mono)">
+                    DNS zone
                   </text>
-                  <rect x="120" y="4" width="80" height="28" rx="6" fill="none" stroke="var(--hairline)" />
-                  <text x="160" y="22" textAnchor="middle" fontSize="10" fill="var(--porcelain)" fontFamily="var(--font-mono)">
-                    Mail DNS
-                  </text>
-                  <line x1="60" y1="32" x2="60" y2="80" stroke="var(--indigo)" />
-                  <line x1="160" y1="32" x2="160" y2="80" stroke="var(--hairline)" />
-                  <rect x="20" y="80" width="80" height="28" rx="6" fill="none" stroke="var(--violet)" />
+                  <line x1="90" y1="32" x2="90" y2="80" stroke="var(--indigo)" />
+                  <line x1="130" y1="32" x2="130" y2="80" stroke="var(--hairline)" />
+                  <rect x="20" y="80" width="80" height="28" rx="6" fill="none" stroke="var(--indigo)" />
                   <text x="60" y="98" textAnchor="middle" fontSize="10" fill="var(--porcelain)" fontFamily="var(--font-mono)">
                     Website
                   </text>
-                  <rect x="120" y="80" width="80" height="28" rx="6" fill="none" stroke="var(--violet)" />
+                  <rect x="120" y="80" width="80" height="28" rx="6" fill="none" stroke="var(--hairline)" />
                   <text x="160" y="98" textAnchor="middle" fontSize="10" fill="var(--porcelain)" fontFamily="var(--font-mono)">
                     Email
                   </text>
                 </svg>
                 <p style={{ fontSize: "0.92rem", color: "var(--text-dim)", marginTop: 12, lineHeight: 1.5 }}>
-                  Separate zones. The site can be changed, redeployed, or rolled back without
-                  touching the mailbox.
+                  Same zone, one record changed. The website&apos;s record now points to modern
+                  hosting; the mail record — and the zone itself — was left alone.
                 </p>
               </div>
             </div>
@@ -163,7 +159,7 @@ export default function BankResourcesCaseStudy() {
               What actually changed, measured.
             </h2>
             <div style={{ display: "flex", gap: 0, flexWrap: "wrap", border: "1px solid var(--hairline)", borderTop: "1px solid var(--hairline)" }}>
-              <KpiStat value="HTTPS" label="enforced, apex to www" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and the old setup left the site and the business's email exposed on the same unprotected DNS zone.`} />
+              <KpiStat value="HTTPS" label="enforced; www → apex" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and a single canonical domain (apex, with www redirecting to it) avoids duplicate-content and broken-link issues down the line.`} />
               <KpiStat value="-79%" label="logo file size" why="A smaller logo file loads faster on the first paint, which matters most on the slower mobile connections a lot of visitors are on." />
               <KpiStat value="0" label="axe-core violations" why="The automated axe-core scan found no violations in the tested pages and states. Keyboard and screen-reader checks remain part of ongoing review — this number is a floor, not a guarantee." />
               <KpiStat value="0" label="W3C validation errors" why="Clean, standards-compliant markup renders predictably across browsers and is cheaper to maintain later — fewer surprises when something needs to change." />
@@ -188,19 +184,20 @@ export default function BankResourcesCaseStudy() {
                 </span>
               </li>
               <li style={{ display: "flex", gap: 18, alignItems: "baseline" }}>
-                <span className="mono" style={{ fontSize: "0.8rem", color: "var(--text-dimmer)", flex: "0 0 110px" }}>
-                  Sept 8, 2026
-                </span>
-                <span style={{ fontSize: "0.98rem", color: "var(--text-dim)" }}>
-                  Legacy site captured and audited in full (12 pages) before any change was made.
-                </span>
-              </li>
-              <li style={{ display: "flex", gap: 18, alignItems: "baseline" }}>
                 <span className="mono" style={{ fontSize: "0.8rem", color: "var(--violet)", flex: "0 0 110px" }}>
                   Sept 3, 2026
                 </span>
                 <span style={{ fontSize: "0.98rem", color: "var(--text-dim)" }}>
                   Rebuilt site relaunched in production at bank-resources.com.
+                </span>
+              </li>
+              <li style={{ display: "flex", gap: 18, alignItems: "baseline" }}>
+                <span className="mono" style={{ fontSize: "0.8rem", color: "var(--text-dimmer)", flex: "0 0 110px" }}>
+                  Sept 8, 2026
+                </span>
+                <span style={{ fontSize: "0.98rem", color: "var(--text-dim)" }}>
+                  Legacy homepage captured from an archived snapshot (12 pages) for accurate
+                  before/after documentation.
                 </span>
               </li>
             </ol>
