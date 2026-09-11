@@ -159,7 +159,7 @@ export default function BankResourcesCaseStudy() {
               What actually changed, measured.
             </h2>
             <div style={{ display: "flex", gap: 0, flexWrap: "wrap", border: "1px solid var(--hairline)", borderTop: "1px solid var(--hairline)" }}>
-              <KpiStat value="HTTPS" label="enforced; www → apex" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and a single canonical domain (apex, with www redirecting to it) avoids duplicate-content and broken-link issues down the line.`} />
+              <KpiStat value="HTTPS" label="enforced; apex → www" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and a single canonical domain (www, with apex redirecting to it) avoids duplicate-content and broken-link issues down the line.`} />
               <KpiStat value="-79%" label="logo file size" why="A smaller logo file loads faster on the first paint, which matters most on the slower mobile connections a lot of visitors are on." />
               <KpiStat value="0" label="axe-core violations" why="The automated axe-core scan found no violations in the tested pages and states. Keyboard and screen-reader checks remain part of ongoing review — this number is a floor, not a guarantee." />
               <KpiStat value="0" label="W3C validation errors" why="Valid markup catches avoidable parsing errors early and gives future changes a cleaner baseline to build on — one measurable signal of code health, not a guarantee of cross-browser behavior." />
