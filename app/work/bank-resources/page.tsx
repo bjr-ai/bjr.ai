@@ -162,7 +162,7 @@ export default function BankResourcesCaseStudy() {
               <KpiStat value="HTTPS" label="enforced; www → apex" why={`Browsers flag anything else as "Not secure" before a visitor reads a word — and a single canonical domain (apex, with www redirecting to it) avoids duplicate-content and broken-link issues down the line.`} />
               <KpiStat value="-79%" label="logo file size" why="A smaller logo file loads faster on the first paint, which matters most on the slower mobile connections a lot of visitors are on." />
               <KpiStat value="0" label="axe-core violations" why="The automated axe-core scan found no violations in the tested pages and states. Keyboard and screen-reader checks remain part of ongoing review — this number is a floor, not a guarantee." />
-              <KpiStat value="0" label="W3C validation errors" why="Clean, standards-compliant markup renders predictably across browsers and is cheaper to maintain later — fewer surprises when something needs to change." />
+              <KpiStat value="0" label="W3C validation errors" why="Valid markup catches avoidable parsing errors early and gives future changes a cleaner baseline to build on — one measurable signal of code health, not a guarantee of cross-browser behavior." />
               <KpiStat value="~170KB" label="core homepage payload" why="A lighter page loads faster on a slow connection — which is exactly the kind of connection a lot of this business's actual customers are on." alignRight borderRight={false} />
             </div>
           </div>
